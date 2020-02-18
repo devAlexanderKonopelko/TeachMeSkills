@@ -7,16 +7,13 @@ fun main() {
     println(toBinaryEasier(86))
 }
 
-fun toBinary(number: Int): String {
-    var binary: StringBuilder = StringBuilder("")
+fun toBinary(number: Int) = with( StringBuilder(""))  {
     var newNumber = number
     while (newNumber != 0) {
-            binary.append(newNumber % 2)
+            this.append(newNumber % 2)
         newNumber /= 2
     }
-    binary.reverse()
-    return binary.toString()
+    this.reverse()
+    this.toString()
 }
-fun toBinaryEasier(number: Int): String {
-    return number.toString(2)
-}
+fun toBinaryEasier(number: Int) = number.toString(2)

@@ -2,7 +2,7 @@ package task3
 
 fun main() {
     println("введите значение рейтинга:")
-    var a = readLine()!!.toInt()
+    var a = readLine()?.toInt() ?: 0
 
     when (a) {
         in 0..19 -> println("Ваша оценка - F")
